@@ -5,7 +5,6 @@ import 'package:documentmanager/payment_logging.dart';
 import 'package:documentmanager/reciept_generation.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -44,7 +43,6 @@ class CostManagementApp extends StatelessWidget {
         primaryColor: Color(0xFF2196F3),
         secondaryHeaderColor: Color(0xFF1976D2),
         scaffoldBackgroundColor: Color(0xFFF8F9FA),
-        textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
@@ -66,11 +64,6 @@ class CostManagementApp extends StatelessWidget {
           centerTitle: false,
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
-          titleTextStyle: GoogleFonts.inter(
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-            color: Colors.black,
-          ),
         ),
       ),
       home: MainHome(),
@@ -259,7 +252,8 @@ class _MainHomeState extends State<MainHome> {
                     ),
                   Divider(height: 32),
                   ListTile(
-                    leading: Icon(Icons.settings_outlined, color: Colors.grey[600]),
+                    leading:
+                        Icon(Icons.settings_outlined, color: Colors.grey[600]),
                     title: Text('Settings'),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
